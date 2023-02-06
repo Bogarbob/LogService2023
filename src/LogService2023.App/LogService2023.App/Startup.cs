@@ -1,5 +1,7 @@
-﻿using LogService2023.App.Services;
+﻿using LogService2023.App.DbContexts;
+using LogService2023.App.Services;
 using LogService2023.App.Services.Interfaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace LogService2023.App
 {
@@ -17,6 +19,7 @@ namespace LogService2023.App
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton(p => settings);
+            services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(settings.DbConnectionString));
 
             services.AddControllers();
 

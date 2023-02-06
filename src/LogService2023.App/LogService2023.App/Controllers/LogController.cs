@@ -17,7 +17,7 @@ namespace LogService2023.App.Controllers
         [HttpGet("GetLogs")]
         public async Task<IEnumerable<Log>> GetLogs()
         {
-            return _logService.List();
+            return await _logService.List();
         }
     }
 }
