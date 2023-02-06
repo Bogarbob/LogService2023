@@ -1,1 +1,1 @@
-# LogService2023
+Diagnosztikai naplózó szolgáltatás
