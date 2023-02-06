@@ -1,4 +1,7 @@
-﻿namespace LogService2023.App
+﻿using LogService2023.App.Services;
+using LogService2023.App.Services.Interfaces;
+
+namespace LogService2023.App
 {
     public class Startup
     {
@@ -29,6 +32,7 @@
                 });
             });
 
+            services.AddScoped<ILogService, LogService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider serviceProvider)
