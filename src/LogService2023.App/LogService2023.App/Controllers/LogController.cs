@@ -38,7 +38,7 @@ namespace LogService2023.App.Controllers
         [HttpGet("Export")]
         public async Task<FileContentResult> Export([FromQuery] LogFilter logFilter)
         {
-            FileContentResult result = null;
+            FileContentResult? result = null;
             var logList = await _logService.List(logFilter);
             try
             {

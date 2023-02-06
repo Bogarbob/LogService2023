@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogService2023.App", "LogSe
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "LogService2023.Database", "..\LogService2023.Database\LogService2023.Database.sqlproj", "{FBB835FE-8B5E-4D32-A8BB-CE046CED4061}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F82AEEF7-8410-48B4-8543-1347B88BF852}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{5E0B8AE9-FC1C-45A5-8148-E618AE3E0916}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogService2023.App.Tests", "LogService2023.App.Tests\LogService2023.App.Tests.csproj", "{D14D9393-3B92-424C-8972-B93C3495C921}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,9 +29,18 @@ Global
 		{FBB835FE-8B5E-4D32-A8BB-CE046CED4061}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FBB835FE-8B5E-4D32-A8BB-CE046CED4061}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FBB835FE-8B5E-4D32-A8BB-CE046CED4061}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{D14D9393-3B92-424C-8972-B93C3495C921}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D14D9393-3B92-424C-8972-B93C3495C921}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D14D9393-3B92-424C-8972-B93C3495C921}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D14D9393-3B92-424C-8972-B93C3495C921}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D148D9AA-A675-414A-98CF-01038444567F} = {F82AEEF7-8410-48B4-8543-1347B88BF852}
+		{FBB835FE-8B5E-4D32-A8BB-CE046CED4061} = {F82AEEF7-8410-48B4-8543-1347B88BF852}
+		{D14D9393-3B92-424C-8972-B93C3495C921} = {5E0B8AE9-FC1C-45A5-8148-E618AE3E0916}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B76E4D25-23C6-4314-8B9D-1F1C360A0AF6}
