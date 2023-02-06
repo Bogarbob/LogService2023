@@ -1,0 +1,6 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/src/LogService2023.Database/bin/Debug
+/src/LogService2023.Database/obj/Debug
