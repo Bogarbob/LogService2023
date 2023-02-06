@@ -2,6 +2,8 @@
 using LogService2023.App.Services;
 using LogService2023.App.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection;
+using System.Text.Json.Serialization;
 
 namespace LogService2023.App
 {
@@ -34,6 +36,14 @@ namespace LogService2023.App
                     builder.WithOrigins().AllowAnyMethod().AllowAnyHeader();
                 });
             });
+
+            services.AddControllers().AddJsonOptions(options =>
+            {
+                options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+                options.JsonSerializerOptions.IgnoreNullValues = true;
+            });
+
+            services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
             services.AddScoped<ILogService, LogService>();
         }
